@@ -11,6 +11,8 @@
     <title>Login</title>
 </head>
 <body>
+<%@ include file="partials/side_nav.jsp" %>
+<%@ include file="partials/banner.jsp" %>
     <form action="/login.jsp" method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username">
@@ -20,6 +22,7 @@
     </form>
 
     <%
+
         String username = request.getParameter("username");
         String password = request.getParameter("pass");
         if(!"".equals(username) && username != null && !"".equals(password) && password != null){
