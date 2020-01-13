@@ -17,7 +17,7 @@ public class Logout extends HttpServlet {
             }
             else{
                 if ((boolean) request.getSession().getAttribute("user")){
-                    session.invalidate();
+                    session.removeAttribute("user");
                     response.sendRedirect("/login");
                 }
             }
